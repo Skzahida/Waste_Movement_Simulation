@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste-Simulation-System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script src="index.js" type="module"></script>
+
+    <style>
+     .info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: inline-block;
+  float:left;
+  width: 200px;
+}
+
+.parent-container {
+  width: 100%;
+}
+
+.next-element {
+  clear: both;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="cntrl-wrap">
+        <div class="cntrl">
+            <span id="play-tog-btn" class="btn">▶</span>
+            <div class="prog-bar-wrap">
+                <div id="prog-bar"></div>
+            </div>
+            <div class="point-info">
+                <span>Point Id:</span>
+                <span id="point-id"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row-container">
+        <div id="marker-select-container">
+            <label for="marker-select">Select a location:</label>
+            <select id="marker-select"></select>
+        </div>
+        <div id="date-picker-container" style="margin-left: 40px;">
+            <label for="date-picker">Select a date:</label>
+            <input type="date" id="date-picker">
+        </div>
+    </div>
+    <div class="waste-container">
+        <div id="waste-select">
+            <label for="waste-type">Select waste type:</label>
+            <select id="waste-type1" name="waste-type">
+  <option value="Dry-waste" selected>Dry Waste</option>
+  <option value="Wet-waste">Wet Waste</option>
+    </select>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet.markerplayer@latest" crossorigin=""></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script type="text/javascript" src="../MovingMarker.js"></script>
+
+</body>
+
+</html>
